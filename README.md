@@ -1,0 +1,2 @@
+sample-eclipse-plugin
+=====================
