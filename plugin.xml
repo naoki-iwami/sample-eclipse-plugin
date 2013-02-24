@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            id="org.sample.eclipse.contribution1">
+         <menu
+               label="New Submenu"
+               path="additions"
+               id="org.sample.eclipse.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               label="New Action"
+               class="org.sample.eclipse.popup.actions.NewAction"
+               menubarPath="org.sample.eclipse.menu1/group1"
+               enablesFor="1"
+               id="org.sample.eclipse.newAction">
+         </action>
+      </objectContribution>
+
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFolder"
+            id="org.sample.eclipse.contribution2">
+         <action
+               label="Folder Action"
+               class="org.sample.eclipse.popup.actions.NewAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="org.sample.eclipse.newAction.folder">
+         </action>
+      </objectContribution>
+
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IProject"
+            id="org.sample.eclipse.contribution3">
+         <action
+               label="Project Action"
+               class="org.sample.eclipse.popup.actions.NewAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="org.sample.eclipse.newAction.project">
+         </action>
+      </objectContribution>
+
+      <objectContribution
+            objectClass="org.eclipse.jdt.core.IJavaProject"
+            id="org.sample.eclipse.contribution4">
+         <action
+               label="Java Project Action"
+               class="org.sample.eclipse.popup.actions.NewAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="org.sample.eclipse.newAction.javaproject">
+         </action>
+      </objectContribution>
+      
+      
+
+   </extension>
+
+</plugin>
